@@ -20,13 +20,13 @@ on:
   workflow_dispatch:
     inputs:
       run_job: 
-        description: Run Specific Job
+        description: "Run Specific Job"
         type: boolean
         required: false
       
       custom_message:
         type: string
-        description: Enter a custom message
+        description: "Enter a custom message"
         required: true
       
 
