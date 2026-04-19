@@ -41,8 +41,12 @@ jobs:
     needs: [job1]
     runs-on: ubuntu-latest
     steps:
-      
       - name: Printing Custom Message
         id: stp1
         run: |
              echo "${{inputs.custom_message}}"
+      - name: Printing run-job boolean value
+        if: ${{inputs.run_job == true}}
+        id: stp2
+        run: |
+           echo "${{inputs.run_job}}"
